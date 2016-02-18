@@ -25,7 +25,7 @@ function sendHelp(msg){
   helpString += "'akamai purge staging <url>' - Submits a request to purge staging Edge content represented by URL.\n";
   helpString += "'akamai purge production <url>' - Submits a request to purge production Edge content represented by URL.\n";
   helpString += "'akamai purge status <purgeid>' -  Request that status information of the purge id.";
-  msg.send(helpString);
+  msg.send("```"+helpString+"```");
 }
 
 module.exports = function(robot){
