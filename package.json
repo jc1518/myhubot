@@ -5,6 +5,7 @@
   "author": "Chen, Jackie <Jackie.Chen@news.com.au>",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "aws-sdk": "^2.2.39",
     "edgegrid": "^1.2.0",
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
