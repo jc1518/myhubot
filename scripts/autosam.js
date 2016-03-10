@@ -27,13 +27,15 @@ module.exports = function(robot){
 
   robot.respond(/autosam (add|remove) (http:\/\/|https:\/\/)(.*) (http:\/\/|https:\/\/)(.*)/i, function(msg){
     action = msg.match[1].replace(/ /g,'').toLowerCase();
-    fromurl = msg.match[2].replace(/ /g,'')+msg.match[3].replace(/ /g,'').toLowerCase().trim();
-    tourl = msg.match[4].replace(/ /g,'')+msg.match[5].replace(/ /g,'').toLowerCase().trim();
+    fromurl = msg.match[2].replace(/ /g,'')+msg.match[3].replace(/ /g,'').trim();
+    tourl = msg.match[4].replace(/ /g,'')+msg.match[5].replace(/ /g,'').trim();
     if (action == 'add'){
       autosam.add(fromurl, tourl, msg);
+      robot.messageRoom('team-ops', msg.message.user.email_address+" added FROM:"+fromurl+" TO:"+tourl);
     }
     if (action == 'remove'){
       autosam.remove(fromurl, tourl, msg);
+      robot.messageRoom('team-ops', msg.message.user.email_address+" removed FROM:"+fromurl+" TO:"+tourl);
     }
   });
 
