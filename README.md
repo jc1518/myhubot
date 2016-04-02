@@ -14,22 +14,15 @@ Install [hubot-slack](https://github.com/slackhq/hubot-slack/blob/master/README.
 ```
 ## Plugins
 ### Akamai 
-[plugin](lib/akamai.js)
-[bot](scripts/akamai.js)
 ![akamai](sample/akamai.png)
 
 ### Autosam
-[plugin](lib/autosam.js)
-[bot](scripts/autosam.js)
 ![autosam](sample/autosam.png)
 
 ### CloudHealth
-[plugin](lib/omb.js)
-[bot](scripts/omb.js)
 ![cloudhealth](sample/cloudhealth.png)
 
 ### Opsgenie
-[bot](scripts/opsgenie.coffee)
 ![opsgenie](sample/opsgenie.png)
 
 
